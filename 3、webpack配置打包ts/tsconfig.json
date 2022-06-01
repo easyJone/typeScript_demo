@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "ES2015", // 编译后的js语法版本
+    "module": "ES2015", // 模块化规范：import。。
+    "strict": true, // 严格检查的总开关，统一控制下面几个
+  }
+}

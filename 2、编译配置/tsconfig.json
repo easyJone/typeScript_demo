@@ -1,0 +1,37 @@
+{
+  /**
+   * ts编译器的配置文件
+   * include: 指定哪些文件需要被编译(*表示任意文件，**表示任意目录)
+   * exclude: 指定哪些文件不需要被编译，默认包含node_modules,bower_components,jspm_packages
+   * extends: 继承，复用别的文件配置
+   * files: 指定编译文件
+   * compilerOptions: 编译器的选项
+   */
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./src/hello/**/*"
+  ],
+  "extends": "./configs/base",
+  "files": [
+    "./src/app.ts"
+  ],
+  "compilerOptions": {
+    "target": "ES3", // 编译后的js语法版本
+    "module": "amd", // 模块化规范：import。。
+    // "lib": [], // 指定项目中要使用的库
+    "outDir": "./dist", // 输出文件目录
+    "outFile": "./dist/app.js", // 将代码合并编译为一个文件
+    "allowJs": false, // 是否编译js文件
+    "checkJs": false, // 是否检查js文件语法规范
+    "removeComments": false, // 是否移除注释
+    "noEmit": false, // 不生成编译后的文件
+    "strict": true, // 严格检查的总开关，统一控制下面几个
+    "noEmitOnError": true, // 当有错误时不生成编译后的文件
+    "alwaysStrict": true, // 设置编译后的js文件使用严格模式
+    "noImplicitAny": true, // 不允许隐式any类型
+    "noImplicitThis": true, // 不允许不明确类型的this
+    "strictNullChecks": true // 严格检查null空值
+  }
+}
