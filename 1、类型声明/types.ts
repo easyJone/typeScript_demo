@@ -62,7 +62,7 @@ let bbb: { name: string, age?: number }
 bbb = { name: '哈哈' }
 
 let ccc: { name: string, [propName: string]: any }
-ccc = { name: '哈哈', a: 1, b: '2' }
+ccc = { name: '哈哈', a: 1, b: false, 3: 4 }
 
 // 函数结构的类型声明
 let ddd: (a: number, b: number, c: number) => number
